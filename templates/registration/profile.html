@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content  %}
+<h1>Bienvenido {{ user.username }}</h1>
+<a href="/accounts/reset_password/">Resetea la contrase&ntilde;a</a>
+<a href="/accounts/change_password/">Cambia la contrase&ntilde;a</a>
+{% endblock %}

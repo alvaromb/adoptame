@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+<h2>Introduce los datos del animal</h2>
+<form method="POST" action=".">
+  {% if form.errors %}
+  <p>Hay errores en el formulario, rev&iacute;salos por favor</p>
+  {% endif %}
+  {% csrf_token %}
+  <table>{{ form }}</table>
+  <input type="submit" value="Añadir" />
+</form>
+{% endblock %}
